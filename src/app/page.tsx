@@ -1,9 +1,5 @@
-import Image from "next/image";
+import DashboardPage from "./dashboard/page";
 
 export default function Home() {
-  return (
-    <div>
-      <p>welcome to trading app</p>
-    </div>
-  );
+  return <DashboardPage />;
 }

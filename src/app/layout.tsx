@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/src/components/Header";
+import Sidebar from "@/src/components/Sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,18 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Full Stack Trading Platform",
+  title: "CryptoTrade - Trade Smarter",
   description:
-    "a full stack application for trading platform like ethirium , gold etc.",
+    "A full stack application for cryptocurrency & asset trading like Bitcoin, Ethereum, and Gold.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <body>{children}</body>
+      <body className="min-h-full bg-[#0b0e17] text-slate-100">
+        <div className="flex min-h-screen">
+          {/* Left Sidebar from Dashboard.png */}
+          <Sidebar />
+
+          {/* Main Area: Top Header + Page Content */}
+          <div className="flex flex-1 flex-col min-w-0">
+            <Header />
+            <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
