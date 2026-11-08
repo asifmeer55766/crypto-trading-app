@@ -41,14 +41,14 @@ export default function Header() {
         {/* Left Side: Search Bar */}
         <div className="relative w-full max-w-sm sm:max-w-md">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
-            <SearchIcon sx={{ fontSize: 20 }} />
+            <SearchIcon sx={{ fontSize: 26 }} />
           </div>
           <input
             type="text"
             value={searchVal}
             onChange={(e) => setSearchVal(e.target.value)}
             placeholder="Search coins... (e.g. Bitcoin, Ethereum)"
-            className="w-full rounded-xl border border-[#20273c] bg-[#131726] py-2.5 pl-10 pr-4 text-sm text-slate-200 placeholder-[#5e6982] transition-colors focus:border-indigo-500 focus:outline-none"
+            className="w-full rounded-xl  bg-[#131726] py-3.5 pl-14 pr-4 text-md text-slate-200 placeholder-[#5e6982] transition-colors focus:border-indigo-500 focus:outline-none"
           />
         </div>
 
@@ -90,7 +90,7 @@ export default function Header() {
               {/* Profile Avatar */}
               <Avatar
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80"
-                alt="John Doe"
+                alt="Asif Hussain "
                 sx={{
                   width: 38,
                   height: 38,
@@ -106,11 +106,11 @@ export default function Header() {
               <div className="hidden sm:flex flex-col">
                 <div className="flex items-center gap-1">
                   <span className="text-sm font-semibold text-white leading-tight">
-                    John Doe
+                    Asif Hussain
                   </span>
                   <KeyboardArrowDownIcon
                     sx={{
-                      fontSize: 18,
+                      fontSize: 24,
                       color: "#94a3b8",
                       transform: profileOpen ? "rotate(180deg)" : "rotate(0deg)",
                       transition: "transform 0.2s ease",
@@ -142,15 +142,15 @@ export default function Header() {
                 <div className="relative flex items-center gap-3 px-2 py-2">
                   <Avatar
                     src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80"
-                    alt="John Doe"
+                    alt="Asif Hussain"
                     sx={{ width: 40, height: 40 }}
                   />
                   <div className="flex flex-col overflow-hidden">
                     <span className="text-sm font-semibold text-white truncate">
-                      John Doe
+                      Asif Hussain
                     </span>
                     <span className="text-xs text-slate-400 truncate">
-                      john.doe@gmail.com
+                      asif@gmail.com
                     </span>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function Header() {
                     onClick={() => setProfileOpen(false)}
                     className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
                   >
-                    <PersonOutlineIcon sx={{ fontSize: 18, color: "#94a3b8" }} />
+                    <PersonOutlineIcon sx={{ fontSize: 24, color: "#94a3b8" }} />
                     Profile Settings
                   </button>
 
@@ -171,7 +171,7 @@ export default function Header() {
                     onClick={() => setProfileOpen(false)}
                     className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
                   >
-                    <ShieldOutlinedIcon sx={{ fontSize: 18, color: "#94a3b8" }} />
+                    <ShieldOutlinedIcon sx={{ fontSize: 24, color: "#94a3b8" }} />
                     Security
                   </button>
 
@@ -181,7 +181,7 @@ export default function Header() {
                     className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
                   >
                     <ReceiptLongOutlinedIcon
-                      sx={{ fontSize: 18, color: "#94a3b8" }}
+                      sx={{ fontSize: 24, color: "#94a3b8" }}
                     />
                     Transaction History
                   </button>
@@ -194,7 +194,7 @@ export default function Header() {
                     }}
                     className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
                   >
-                    <SyncIcon sx={{ fontSize: 18, color: "#94a3b8" }} />
+                    <SyncIcon sx={{ fontSize: 24, color: "#94a3b8" }} />
                     Reset Account
                   </button>
                 </div>

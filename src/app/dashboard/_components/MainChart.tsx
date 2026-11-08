@@ -52,54 +52,64 @@ export default function MainChart() {
         </div>
       </div>
 
-      {/* SVG Glow Chart */}
-      <div className="relative mt-4 h-64 w-full">
-        {/* Floating Price Badge */}
-        <div className="absolute right-12 top-6 rounded-lg bg-emerald-500 px-2 py-0.5 text-xs font-bold text-white shadow-md">
-          $68,432.12
+      {/* SVG Glow Chart with Y-Axis */}
+      <div className="relative mt-4 flex h-64 w-full">
+        {/* Y-Axis Labels */}
+        <div className="flex flex-col justify-between text-[11px] font-medium text-slate-500 pr-3 pb-6 select-none">
+          <span>$70,000</span>
+          <span>$68,000</span>
+          <span>$66,000</span>
         </div>
 
-        {/* Chart SVG */}
-        <svg viewBox="0 0 600 200" className="h-full w-full overflow-visible">
-          <defs>
-            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#10b981" stopOpacity="0.35" />
-              <stop offset="100%" stopColor="#10b981" stopOpacity="0.0" />
-            </linearGradient>
-          </defs>
+        {/* Chart SVG Canvas */}
+        <div className="relative flex-1 h-full">
+          {/* Floating Price Badge */}
+          <div className="absolute right-14 top-4 z-10 flex items-center gap-1.5 rounded-lg bg-[#00c087] px-2.5 py-1 text-xs font-bold text-white shadow-md shadow-emerald-500/30">
+            $68,432.12
+          </div>
 
-          {/* Grid Lines */}
-          <line x1="0" y1="40" x2="600" y2="40" stroke="#1e2640" strokeDasharray="3 3" />
-          <line x1="0" y1="90" x2="600" y2="90" stroke="#1e2640" strokeDasharray="3 3" />
-          <line x1="0" y1="140" x2="600" y2="140" stroke="#1e2640" strokeDasharray="3 3" />
+          {/* Chart SVG */}
+          <svg viewBox="0 0 600 200" className="h-full w-full overflow-visible">
+            <defs>
+              <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#10b981" stopOpacity="0.32" />
+                <stop offset="100%" stopColor="#10b981" stopOpacity="0.0" />
+              </linearGradient>
+            </defs>
 
-          {/* Area */}
-          <path
-            d="M 0 170 Q 50 140, 100 150 T 200 120 T 300 80 T 400 90 T 500 50 T 600 40 L 600 200 L 0 200 Z"
-            fill="url(#chartGradient)"
-          />
+            {/* Grid Lines */}
+            <line x1="0" y1="20" x2="600" y2="20" stroke="#1e2640" strokeDasharray="3 3" />
+            <line x1="0" y1="80" x2="600" y2="80" stroke="#1e2640" strokeDasharray="3 3" />
+            <line x1="0" y1="140" x2="600" y2="140" stroke="#1e2640" strokeDasharray="3 3" />
 
-          {/* Glowing Line */}
-          <path
-            d="M 0 170 Q 50 140, 100 150 T 200 120 T 300 80 T 400 90 T 500 50 T 600 40"
-            fill="none"
-            stroke="#10b981"
-            strokeWidth="3"
-            className="drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]"
-          />
+            {/* Area */}
+            <path
+              d="M 0 170 Q 50 140, 100 150 T 200 120 T 300 80 T 400 90 T 500 50 T 600 40 L 600 200 L 0 200 Z"
+              fill="url(#chartGradient)"
+            />
 
-          {/* End Point Glow */}
-          <circle cx="600" cy="40" r="4.5" fill="#10b981" />
-        </svg>
+            {/* Glowing Line */}
+            <path
+              d="M 0 170 Q 50 140, 100 150 T 200 120 T 300 80 T 400 90 T 500 50 T 600 40"
+              fill="none"
+              stroke="#10b981"
+              strokeWidth="2.8"
+              className="drop-shadow-[0_0_10px_rgba(16,185,129,0.55)]"
+            />
 
-        {/* X-Axis Labels */}
-        <div className="flex justify-between text-[11px] text-slate-500 pt-2">
-          <span>12AM</span>
-          <span>4AM</span>
-          <span>8AM</span>
-          <span>12PM</span>
-          <span>4PM</span>
-          <span>8PM</span>
+            {/* Glowing Active Dot */}
+            <circle cx="500" cy="50" r="4.5" fill="#ffffff" stroke="#10b981" strokeWidth="2.5" />
+          </svg>
+
+          {/* X-Axis Labels */}
+          <div className="flex justify-between text-[11px] text-slate-500 pt-2 select-none">
+            <span>12AM</span>
+            <span>4AM</span>
+            <span>8AM</span>
+            <span>12PM</span>
+            <span>4PM</span>
+            <span>8PM</span>
+          </div>
         </div>
       </div>
     </div>

@@ -54,8 +54,8 @@ export default function StatsRow() {
       {/* Total Portfolio */}
       <div className="flex items-center justify-between rounded-2xl border border-[#1e2640] bg-[#131828] p-4 shadow-sm transition hover:border-slate-700">
         <div className="flex items-center gap-3.5">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600/20 text-emerald-400 shadow-md">
-            <AccountBalanceWalletOutlinedIcon sx={{ fontSize: 24 }} />
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00c087] text-white shadow-md shadow-emerald-500/20">
+            <AccountBalanceWalletOutlinedIcon sx={{ fontSize: 22 }} />
           </div>
           <div className="flex flex-col">
             <span className="text-xs font-medium text-slate-400">Total Portfolio</span>
@@ -76,8 +76,8 @@ export default function StatsRow() {
       {/* Available Balance + Deposit Button */}
       <div className="flex items-center justify-between rounded-2xl border border-[#1e2640] bg-[#131828] p-4 shadow-sm transition hover:border-slate-700">
         <div className="flex items-center gap-3.5">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600/20 text-blue-400 shadow-md">
-            <AccountBalanceWalletOutlinedIcon sx={{ fontSize: 24 }} />
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#2563eb] text-white shadow-md shadow-blue-500/20">
+            <AccountBalanceWalletOutlinedIcon sx={{ fontSize: 22 }} />
           </div>
           <div className="flex flex-col">
             <span className="text-xs font-medium text-slate-400">Available Balance</span>
@@ -87,7 +87,7 @@ export default function StatsRow() {
         <button
           type="button"
           onClick={() => alert("Deposit modal triggered")}
-          className="rounded-xl bg-[#4f46e5] px-4 py-1.5 text-xs font-semibold text-white shadow-md shadow-indigo-600/25 transition hover:bg-indigo-500"
+          className="rounded-xl bg-[#5850ec] px-4 py-2 text-xs font-semibold text-white shadow-md shadow-indigo-600/30 transition hover:bg-indigo-500"
         >
           Deposit
         </button>
